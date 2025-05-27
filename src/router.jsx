@@ -14,7 +14,7 @@ function AppRouter() {
             <Routes>
                 <Route path="/" element={<AppLayout />}>
                     <Route index element={<HomePage />} />
-                    <Route path="products" element={<ProductPage />} />
+                    <Route path="product" element={<ProductPage />} />
                     <Route path="about" element={<AboutUsPage />} />
                     <Route path="contact" element={<ContactPage />} />
                     <Route path="*" element={<NotFoundPage />} />

@@ -7,7 +7,7 @@ function AppLayout() {
     return (
         <>
             <Navbar />
-            <main >
+            <main className="bg-gradient-to-b from-amber-50 to-orange-100" >
                 <Outlet />
             </main>
             <Footer />
