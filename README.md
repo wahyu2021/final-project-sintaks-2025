@@ -41,7 +41,7 @@ Website ini dibangun dengan teknologi web modern untuk performa dan pengalaman p
 ---
 
 ## 📁 Struktur Proyek
-
+\`\`\`bash
 sumatera-sutra/
 ├── public/ # Aset statis seperti logo, favicon
 ├── src/
@@ -66,6 +66,7 @@ sumatera-sutra/
 ├── package.json
 ├── vite.config.js
 └── README.md
+\`\`\`
 ---
 
 ## 🚀 Cara Menjalankan Proyek
