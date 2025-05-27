@@ -42,33 +42,30 @@ Website ini dibangun dengan teknologi web modern untuk performa dan pengalaman p
 
 ## 📁 Struktur Proyek
 
-\`\`\`
 sumatera-sutra/
-├── public/                # Aset statis seperti logo, favicon
+├── public/ # Aset statis seperti logo, favicon
 ├── src/
-│   ├── assets/            # Gambar, data dummy, style global
-│   │   ├── images/
-│   │   ├── styles/
-│   │   └── data/
-│   ├── components/        # Komponen UI reusable
-│   │   ├── common/
-│   │   ├── product/
-│   │   └── ui/
-│   ├── contexts/          # Global state (ex: keranjang belanja)
-│   ├── hooks/             # Custom hooks React
-│   ├── pages/             # Halaman utama (Home, Produk, About, dll.)
-│   ├── services/          # Integrasi API dan Firebase
-│   ├── utils/             # Fungsi utilitas bantu
-│   ├── App.jsx            # Komponen utama aplikasi
-│   ├── main.jsx           # Entry point aplikasi
-│   └── router.jsx         # Konfigurasi routing
-├── .env                   # Environment variables
+│ ├── assets/ # Gambar, data dummy, style global
+│ │ ├── images/
+│ │ ├── styles/
+│ │ └── data/
+│ ├── components/ # Komponen UI reusable
+│ │ ├── common/
+│ │ ├── product/
+│ │ └── ui/
+│ ├── contexts/ # Global state (ex: keranjang belanja)
+│ ├── hooks/ # Custom hooks React
+│ ├── pages/ # Halaman utama (Home, Produk, About, dll.)
+│ ├── services/ # Integrasi API dan Firebase
+│ ├── utils/ # Fungsi utilitas bantu
+│ ├── App.jsx # Komponen utama aplikasi
+│ ├── main.jsx # Entry point aplikasi
+│ └── router.jsx # Konfigurasi routing
+├── .env # Environment variables
 ├── .gitignore
 ├── package.json
 ├── vite.config.js
 └── README.md
-\`\`\`
-
 ---
 
 ## 🚀 Cara Menjalankan Proyek
