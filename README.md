@@ -41,32 +41,34 @@ Website ini dibangun dengan teknologi web modern untuk performa dan pengalaman p
 ---
 
 ## 📁 Struktur Proyek
-\`\`\`bash
+
+```bash
 sumatera-sutra/
-├── public/ # Aset statis seperti logo, favicon
+├── public/                    # Aset statis seperti logo, favicon
 ├── src/
-│ ├── assets/ # Gambar, data dummy, style global
-│ │ ├── images/
-│ │ ├── styles/
-│ │ └── data/
-│ ├── components/ # Komponen UI reusable
-│ │ ├── common/
-│ │ ├── product/
-│ │ └── ui/
-│ ├── contexts/ # Global state (ex: keranjang belanja)
-│ ├── hooks/ # Custom hooks React
-│ ├── pages/ # Halaman utama (Home, Produk, About, dll.)
-│ ├── services/ # Integrasi API dan Firebase
-│ ├── utils/ # Fungsi utilitas bantu
-│ ├── App.jsx # Komponen utama aplikasi
-│ ├── main.jsx # Entry point aplikasi
-│ └── router.jsx # Konfigurasi routing
-├── .env # Environment variables
+│   ├── assets/               # Gambar, data dummy, style global
+│   │   ├── images/
+│   │   ├── styles/
+│   │   └── data/
+│   ├── components/           # Komponen UI reusable
+│   │   ├── common/
+│   │   ├── product/
+│   │   └── ui/
+│   ├── contexts/             # Global state (ex: keranjang belanja)
+│   ├── hooks/                # Custom hooks React
+│   ├── pages/                # Halaman utama (Home, Produk, About, dll.)
+│   ├── services/             # Integrasi API dan Firebase
+│   ├── utils/                # Fungsi utilitas bantu
+│   ├── App.jsx               # Komponen utama aplikasi
+│   ├── main.jsx              # Entry point aplikasi
+│   └── router.jsx            # Konfigurasi routing
+├── .env                      # Environment variables
 ├── .gitignore
 ├── package.json
 ├── vite.config.js
 └── README.md
-\`\`\`
+```
+
 ---
 
 ## 🚀 Cara Menjalankan Proyek
@@ -74,28 +76,32 @@ sumatera-sutra/
 Ikuti langkah berikut untuk menjalankan proyek di komputer lokal Anda:
 
 1. **Pastikan Node.js terinstal** (disarankan versi LTS).
+
 2. **Clone repositori:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/wahyu2021/final-project-sintaks-2025.git
    cd sumatera-sutra
-   \`\`\`
+   ```
+
 3. **Instal dependensi:**
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
+
 4. **Jalankan aplikasi:**
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
-   Akses website di browser Anda melalui: \`http://localhost:5173\`
+   ```
+   Akses website di browser Anda melalui: `http://localhost:5173`
 
 ---
 
 ## 🤝 Kontribusi
 
-Kami terbuka untuk kontribusi dari siapa pun yang ingin membantu memajukan proyek **Sumatera Sutra**.  
+Kami terbuka untuk kontribusi dari siapa pun yang ingin membantu memajukan proyek **Sumatera Sutra**.
+
 Jika Anda memiliki ide, perbaikan bug, atau ingin menambahkan fitur baru, silakan buat **issue** atau **pull request**.
 
 ---
 
-Terima kasih telah mendukung dan menjelajahi proyek **Sumatera Sutra** – tempat budaya dan teknologi berpadu menjadi satu.
+**Terima kasih telah mendukung dan menjelajahi proyek Sumatera Sutra – tempat budaya dan teknologi berpadu menjadi satu.**
