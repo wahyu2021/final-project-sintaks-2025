@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MdErrorOutline } from "react-icons/md";
 import { motion as framerMotion } from "framer-motion";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-// Alias untuk tag motion
 const MotionDiv = framerMotion.div;
 const MotionH1 = framerMotion.h1;
 const MotionP = framerMotion.p;
@@ -11,7 +10,7 @@ const MotionP = framerMotion.p;
 function NotFoundPage() {
   return (
     <MotionDiv
-      className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gray-900"
+      className="min-h-screen flex flex-col items-center pt-48 px-4 text-center bg-base-100"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -20,21 +19,27 @@ function NotFoundPage() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
+        className="-mb-16"
       >
-        <MdErrorOutline className="text-8xl text-amber-600 mb-4" />
+        <Player
+          autoplay
+          loop
+          src="/animations/404.json"
+          style={{ height: "350px", width: "350px" }}
+        />
       </MotionDiv>
 
       <MotionH1
-        className="text-5xl font-bold text-gray-50 mb-4"
+        className="text-5xl font-bold text-primary mb-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
       >
-        404 - Page Not Found
+        Page Not Found
       </MotionH1>
 
       <MotionP
-        className="text-lg text-gray-400 mb-6"
+        className="text-lg text-base-content/70 mb-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
@@ -47,10 +52,7 @@ function NotFoundPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
       >
-        <Link
-          to="/"
-          className="btn bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded"
-        >
+        <Link to="/" className="btn btn-warning font-bold">
           Back to Home
         </Link>
       </MotionDiv>

@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductPage from "./pages/ProductPage/ProductPage";
+
+import AppLayout from "./layouts/AppLayout";
 import HomePage from "./pages/HomePage/HomePage";
+import ProductPage from "./pages/ProductPage/ProductPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
@@ -10,15 +12,13 @@ function AppRouter() {
     return (
         <Router>
             <Routes>
-                {/* Halaman Beranda (Home Page) */}
-                <Route index element={<HomePage />} />
-                <Route path="/products" element={<ProductPage />} />
-                {/* Halaman Tentang Kami */}
-                <Route path="/about" element={<AboutUsPage />} />
-                {/* Halaman Kontak */}
-                <Route path="/contact" element={<ContactPage />} />
-
-                <Route path="*" element={<NotFoundPage />} />
+                <Route path="/" element={<AppLayout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="products" element={<ProductPage />} />
+                    <Route path="about" element={<AboutUsPage />} />
+                    <Route path="contact" element={<ContactPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                </Route>
             </Routes>
         </Router>
     );
