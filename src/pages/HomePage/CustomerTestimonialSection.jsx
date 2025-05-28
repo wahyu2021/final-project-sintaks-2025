@@ -73,6 +73,7 @@ export default function CustomerTestimonialsCarousel() {
 
   return (
     <section
+      id="testimoni"
       ref={sectionRef}
       className="py-16 md:py-24 bg-gradient-to-r from-amber-50 to-orange-50 overflow-hidden" // overflow-hidden penting untuk carousel
       style={getFadeInUpAnimationStyle(isVisible, 0)} // Animasi fade-in untuk seluruh section

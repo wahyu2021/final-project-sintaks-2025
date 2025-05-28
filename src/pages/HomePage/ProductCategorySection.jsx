@@ -50,7 +50,7 @@ export default function ProductCategorySection() {
             ),
             description: "Jelajahi berbagai pilihan busana dan aksesoris wanita.",
             link: "#kategori-wanita",
-            urlImage: "/images/model-pria-songket.jpeg",
+            urlImage: "/images/model-wanita-songket.jpeg",
         },
         {
             name: "Aksesori",
