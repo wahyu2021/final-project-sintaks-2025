@@ -4,6 +4,7 @@ import React from 'react'
 import HeroSection from './HeroSection';
 import SongketHistorySection from './SongketHistorySection';
 import ProductCategorySection from './ProductCategorySection';
+import CustomerTestimonialsSection from './CustomerTestimonialSection';
 
 function HomePage() {
   return (
@@ -11,6 +12,8 @@ function HomePage() {
       <HeroSection />
       <SongketHistorySection />
       <ProductCategorySection />
+      <CustomerTestimonialsSection />
+      
     </>
   );
 }

@@ -1,38 +1,40 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Pastikan Anda menggunakan react-router-dom jika Link ini relevan
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 
 export default function Footer() {
     return (
-        <footer className="bg-gradient-to-r from-amber-50 to-orange-50 border-t border-amber-200 flex justify-center">
-            <div className="container py-12">
+        <footer className="bg-amber-600 border-t border-amber-700 flex justify-center"> {/* Border sedikit lebih gelap untuk subtle separation */}
+            <div className="container py-12 text-amber-50"> {/* Warna teks default untuk footer jadi terang */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Brand & About */}
                     <div className="space-y-4">
                         <div>
-                            <h3 className="text-2xl font-bold text-amber-800 mb-2">Sumatra Sutra</h3>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                Melestarikan warisan kain sutera tradisional Sumatera Selatan 
+                            <h3 className="text-2xl font-bold text-white mb-2">Sumatra Sutra</h3> {/* Judul lebih terang */}
+                            <p className="text-sm text-amber-100 leading-relaxed"> {/* Deskripsi lebih terang */}
+                                Melestarikan warisan kain sutera tradisional Sumatera Selatan
                                 dengan kualitas terbaik dan motif autentik yang telah turun temurun.
                             </p>
                         </div>
-                        <div className="flex space-x-3">
-                            <Link to="#" className="text-amber-600 hover:text-amber-800 transition-colors">
+                        <div className="flex space-x-4"> {/* Memberi sedikit lebih banyak spasi antar ikon sosial media */}
+                            <Link to="#" className="text-amber-100 hover:text-white transition-colors"> {/* Ikon sosial media terang */}
                                 <FaFacebookF className="h-5 w-5" />
                             </Link>
-                            <Link to="#" className="text-amber-600 hover:text-amber-800 transition-colors">
+                            <Link to="#" className="text-amber-100 hover:text-white transition-colors">
                                 <FaInstagram className="h-5 w-5" />
                             </Link>
-                            <Link to="#" className="text-amber-600 hover:text-amber-800 transition-colors">
+                            <Link to="#" className="text-amber-100 hover:text-white transition-colors">
                                 <FaTwitter className="h-5 w-5" />
                             </Link>
                         </div>
                     </div>
 
                     {/* Products & Services */}
-                    <div className="md:ml-28">
-                        <h6 className="font-semibold text-amber-800 mb-4">Produk & Layanan</h6>
+                    <div className="md:ml-8 lg:ml-16 xl:ml-28"> {/* Penyesuaian margin untuk layout yang lebih baik */}
+                        <h6 className="font-semibold text-white mb-4">Produk & Layanan</h6> {/* Judul kolom lebih terang */}
                         <nav className="space-y-2">
                             {[
                                 "Kain Sutera Songket",
@@ -44,7 +46,7 @@ export default function Footer() {
                                 <Link
                                     key={i}
                                     to="#"
-                                    className="block text-sm text-gray-600 hover:text-amber-700 transition-colors"
+                                    className="block text-sm text-amber-100 hover:text-white transition-colors" /* Link lebih terang */
                                 >
                                     {item}
                                 </Link>
@@ -53,8 +55,8 @@ export default function Footer() {
                     </div>
 
                     {/* Company Info */}
-                    <div className="md:ml-24">
-                        <h6 className="font-semibold text-amber-800 mb-4">Informasi</h6>
+                    <div className="md:ml-8 lg:ml-12 xl:ml-24"> {/* Penyesuaian margin */}
+                        <h6 className="font-semibold text-white mb-4">Informasi</h6> {/* Judul kolom lebih terang */}
                         <nav className="space-y-2">
                             {[
                                 "Tentang Kami",
@@ -66,7 +68,7 @@ export default function Footer() {
                                 <Link
                                     key={i}
                                     to="#"
-                                    className="block text-sm text-gray-600 hover:text-amber-700 transition-colors"
+                                    className="block text-sm text-amber-100 hover:text-white transition-colors" /* Link lebih terang */
                                 >
                                     {item}
                                 </Link>
@@ -75,22 +77,23 @@ export default function Footer() {
                     </div>
 
                     {/* Contact Info */}
-                    <div className="space-y-3 mb-6">
-                        <div className="flex items-start space-x-2">
-                            <FiMapPin className="h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-gray-600">
+                    <div className="space-y-3"> {/* Menghapus mb-6 agar konsisten */}
+                        <h6 className="font-semibold text-white mb-4 md:hidden lg:block">Kontak Kami</h6> {/* Judul kontak, opsional tampilkan di beberapa ukuran layar */}
+                        <div className="flex items-start space-x-3"> {/* Spasi ikon dan teks lebih konsisten */}
+                            <FiMapPin className="h-5 w-5 text-amber-100 mt-0.5 flex-shrink-0" /> {/* Ikon kontak terang */}
+                            <span className="text-sm text-amber-100"> {/* Teks kontak terang */}
                                 Jl. Merdeka No. 123, Palembang, Sumatera Selatan
                             </span>
                         </div>
-                        <div className="flex items-center space-x-2">
-                            <FiPhone className="h-4 w-4 text-amber-600 flex-shrink-0" />
-                            <span className="text-sm text-gray-600">
+                        <div className="flex items-center space-x-3">
+                            <FiPhone className="h-5 w-5 text-amber-100 flex-shrink-0" />
+                            <span className="text-sm text-amber-100">
                                 +62 812-3456-7890
                             </span>
                         </div>
-                        <div className="flex items-center space-x-2">
-                            <FiMail className="h-4 w-4 text-amber-600 flex-shrink-0" />
-                            <span className="text-sm text-gray-600">
+                        <div className="flex items-center space-x-3">
+                            <FiMail className="h-5 w-5 text-amber-100 flex-shrink-0" />
+                            <span className="text-sm text-amber-100">
                                 info@sumatrasutra.com
                             </span>
                         </div>
@@ -98,13 +101,13 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Section */}
-                <div className="border-t border-amber-200 mt-8 pt-6">
+                <div className="border-t border-amber-700 mt-8 pt-6"> {/* Border sedikit lebih gelap */}
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-amber-100"> {/* Teks copyright terang */}
                             © {new Date().getFullYear()} Sumatra Sutra. Semua hak cipta dilindungi.
                         </div>
                         <div className="text-center">
-                            <p className="text-xs text-amber-700 italic">
+                            <p className="text-xs text-white italic"> {/* Tagline lebih terang */}
                                 "Melestarikan Budaya Sutera Nusantara dengan Bangga"
                             </p>
                         </div>
