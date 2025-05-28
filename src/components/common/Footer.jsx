@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+// import React from "react";
 // import { Link } from "react-router-dom"; // Pastikan Anda menggunakan react-router-dom jika Link ini relevan
 import { HashLink as Link } from "react-router-hash-link";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -51,6 +51,12 @@ export default function Footer() {
                             </Link>
                             <Link
                                 to="#"
+                                className="text-amber-100 hover:text-white transition-colors"
+                            >
+                                <FaFacebookF className="h-5 w-5" />
+                            </Link>
+                            <Link 
+                                to="https://www.instagram.com/sumaterasutra?igsh=YmZ1dG11c2JiczV2" 
                                 className="text-amber-100 hover:text-white transition-colors"
                             >
                                 <FaInstagram className="h-5 w-5" />
@@ -138,7 +144,7 @@ export default function Footer() {
                         <div className="flex items-center space-x-3">
                             <FiMail className="h-5 w-5 text-amber-100 flex-shrink-0" />
                             <span className="text-sm text-amber-100">
-                                info@sumatrasutra.com
+                                info@sumaterasutra.com
                             </span>
                         </div>
                     </div>
