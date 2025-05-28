@@ -5,7 +5,7 @@ function ContactPage() {
     <>
     <div>ContactPage</div>
     <p>Hubungi 0812</p>
-    <p>Tes</p>
+    
     </>
     
   )
