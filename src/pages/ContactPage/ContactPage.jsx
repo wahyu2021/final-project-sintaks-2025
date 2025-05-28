@@ -29,7 +29,7 @@ function ContactPage() {
         <div className="flex flex-col md:flex-row md:space-x-12">
           {/* Contact Info */}
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-xl font-semibold mb-4">Get in touch with us!</h2>
+            <h2 className="text-xl font-semibold mb-4">Get in touch with us! :)</h2>
             <p className="mb-2">
               <strong>Email:</strong>{' '}
               <a href="mailto:contact@sumaterasutra.com" className="text-blue-600 hover:underline">
