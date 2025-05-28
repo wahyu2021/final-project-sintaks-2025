@@ -59,7 +59,7 @@ export default function ProductCategorySection() {
             ),
             description: "Lengkapi penampilan Anda dengan beragam aksesoris.",
             link: "#kategori-aksesori",
-            urlImage: "/images/model-pria-songket.jpeg",
+            urlImage: "/images/aksesoris-songket.jpg",
         },
     ];
 

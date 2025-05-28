@@ -1,6 +1,6 @@
 "use client";
 
-// import React from "react";
+import React from "react";
 // import { Link } from "react-router-dom"; // Pastikan Anda menggunakan react-router-dom jika Link ini relevan
 import { HashLink as Link } from "react-router-hash-link";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -26,9 +26,12 @@ export default function Footer() {
                     {/* Brand & About */}
                     <div className="space-y-4">
                         <div>
-                            <h3 className="text-2xl font-bold text-white mb-2">
-                                Sumatra Sutra
-                            </h3>{" "}
+                            <div className="flex items-center">
+                                <img src="/logo-2.png" alt="" className="w-16"/>
+                                <h3 className="text-2xl font-bold text-white mb-2">
+                                    Sumatra Sutra
+                                </h3>
+                            </div>
                             {/* Judul lebih terang */}
                             <p className="text-sm text-amber-100 leading-relaxed">
                                 {" "}
@@ -41,14 +44,6 @@ export default function Footer() {
                         <div className="flex space-x-4">
                             {" "}
                             {/* Memberi sedikit lebih banyak spasi antar ikon sosial media */}
-                            <Link
-                                to="#"
-                                className="text-amber-100 hover:text-white transition-colors"
-                            >
-                                {" "}
-                                {/* Ikon sosial media terang */}
-                                <FaFacebookF className="h-5 w-5" />
-                            </Link>
                             <Link
                                 to="#"
                                 className="text-amber-100 hover:text-white transition-colors"

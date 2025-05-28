@@ -59,9 +59,9 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link
                         to="/"
-                        className="flex items-center gap-2 text-2xl font-bold text-amber-700 hover:text-amber-800 transition-colors duration-200"
+                        className="flex items-center gap-2 text-2xl font-bold text-amber-700 hover:text-amber-800 transition-colors duration-200 ml-8"
                     >
-                        <PiYarn className="text-4xl" />
+                        <img src="/logo-2.png" alt="" className="h-8"/>
                         <span className="tracking-wide">Sumatera Sutra</span>
                     </Link>
                 </div>
@@ -105,7 +105,7 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="navbar-end hidden md:flex gap-3 pr-4">
+                <div className="navbar-end hidden md:flex gap-3 mr-8">
                     <Link
                         to="/contact"
                         className="btn btn-outline border-gray-300 text-sm hover:bg-transparent hover:border-amber-500 hover:text-amber-600 transition rounded-lg"
