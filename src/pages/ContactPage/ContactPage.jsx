@@ -4,7 +4,7 @@ function ContactPage() {
   return (
     <>
     <div>ContactPage</div>
-    <p>Hubungi</p>
+    <p>Hubungi 0812</p>
     </>
     
   )
