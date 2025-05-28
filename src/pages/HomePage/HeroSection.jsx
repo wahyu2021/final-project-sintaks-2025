@@ -2,7 +2,7 @@
 
 import { ArrowRight, Heart, Shield, Star, Truck } from "lucide-react";
 import { useState, useEffect } from "react";
-import BadgeSongketHeartIcon from "../ui/BadgeSongketHeartIcon";
+import BadgeSongketHeartIcon from "../../components/ui/BadgeSongketHeartIcon";
 
 export default function HeroSection() {
     // State untuk animasi
@@ -254,7 +254,7 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative Border */}
-            <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-amber-400 to-orange-400"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-orange-400"></div>
         </section>
     );
 }
