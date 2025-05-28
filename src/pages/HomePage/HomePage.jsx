@@ -1,10 +1,14 @@
+"use client"
+
 import React from 'react'
-import HeroSection from '../../components/common/HeroSection';
+import HeroSection from './HeroSection';
+import SongketHistorySection from './SongketHistorySection';
 
 function HomePage() {
   return (
     <>
       <HeroSection />
+      <SongketHistorySection />
     </>
   );
 }
