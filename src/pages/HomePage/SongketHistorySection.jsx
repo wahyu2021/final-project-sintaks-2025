@@ -2,13 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Scissors, Award, History, MapPin , ArrowRight} from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 export default function SongketHistorySection() {
   const [isVisible, setIsVisible] = useState(false);
   // PERUBAHAN UTAMA: Hapus tipe generik TypeScript dari useRef
   const sectionRef = useRef(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const currentElement = sectionRef.current;
@@ -187,7 +185,10 @@ export default function SongketHistorySection() {
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-12">Perjalanan Sejarah Songket</h3>
+          <div className="flex justify-center items-center flex-col gap-4">
+          <h3 className="text-2xl font-bold text-center text-gray-900">Perjalanan Sejarah Songket</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mb-16"></div>
+          </div>
 
           <div className="relative">
             {/* Timeline Line */}
@@ -271,32 +272,6 @@ export default function SongketHistorySection() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div
-          className="mt-24 text-center"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(30px)",
-            transition: "opacity 1s ease-out 1s, transform 1s ease-out 1s",
-          }}
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Jelajahi Koleksi Songket Kami</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Temukan keindahan songket asli Sumatera dengan berbagai motif tradisional yang ditenun dengan keahlian
-            tinggi dan benang berkualitas premium.
-          </p>
-          <button
-            className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center mx-auto"
-            style={{ transition: "all 0.3s ease" }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            onClick={() => navigate("/products")}
-          >
-            Lihat Koleksi Songket
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
         </div>
       </div>
     </section>

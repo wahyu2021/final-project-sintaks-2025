@@ -31,7 +31,7 @@ export default function Navbar() {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-gradient-to-r from-amber-200 to-orange-100 border-b border-amber-200 rounded-box w-52 shadow-xl"
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-gradient-to-r from-amber-100 to-orange-50 border-b border-amber-200 rounded-box w-52 shadow-xl"
                         >
                             <li>
                                 <Link to="/" className="font-semibold">
