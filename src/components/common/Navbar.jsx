@@ -2,7 +2,7 @@ import React from "react";
 import { PiYarn } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
     return (
         <>
             <div className="navbar fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-amber-50 to-orange-50 border-b border-amber-200 backdrop-blur-lg shadow-md">
@@ -74,7 +74,7 @@ function Navbar() {
                                 to="/"
                                 className="font-semibold hover:text-amber-700"
                             >
-                                Home
+                                Beranda
                             </Link>
                         </li>
                         <li>
@@ -82,7 +82,7 @@ function Navbar() {
                                 to="/about"
                                 className="font-semibold hover:text-amber-700"
                             >
-                                About Us
+                                Tentang Kami
                             </Link>
                         </li>
                         <li>
@@ -90,7 +90,7 @@ function Navbar() {
                                 to="/product"
                                 className="font-semibold hover:text-amber-700"
                             >
-                                Product
+                                Produk
                             </Link>
                         </li>
                         <li>
@@ -98,7 +98,7 @@ function Navbar() {
                                 to="/contact"
                                 className="font-semibold hover:text-amber-700"
                             >
-                                Contact
+                                Kontak
                             </Link>
                         </li>
                     </ul>
@@ -108,7 +108,7 @@ function Navbar() {
                 <div className="navbar-end hidden md:flex gap-3 pr-4">
                     <Link
                         to="/quote"
-                        className="btn btn-outline border-gray-300 text-sm hover:border-amber-500 hover:text-amber-600 transition"
+                        className="btn btn-outline border-gray-300 text-sm hover:bg-transparent hover:border-amber-500 hover:text-amber-600 transition"
                     >
                         Request a Quote
                     </Link>
@@ -126,5 +126,3 @@ function Navbar() {
         </>
     );
 }
-
-export default Navbar;
