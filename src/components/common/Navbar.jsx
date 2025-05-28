@@ -44,7 +44,7 @@ export default function Navbar() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/product" className="font-semibold">
+                                <Link to="/products" className="font-semibold">
                                     Product
                                 </Link>
                             </li>
@@ -72,7 +72,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 to="/"
-                                className="font-semibold hover:text-amber-700"
+                                className="font-semibold hover:text-amber-500"
                             >
                                 Beranda
                             </Link>
@@ -80,15 +80,15 @@ export default function Navbar() {
                         <li>
                             <Link
                                 to="/about"
-                                className="font-semibold hover:text-amber-700"
+                                className="font-semibold hover:text-amber-500"
                             >
                                 Tentang Kami
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to="/product"
-                                className="font-semibold hover:text-amber-700"
+                                to="/products"
+                                className="font-semibold hover:text-amber-500"
                             >
                                 Produk
                             </Link>
@@ -96,7 +96,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 to="/contact"
-                                className="font-semibold hover:text-amber-700"
+                                className="font-semibold hover:text-amber-500"
                             >
                                 Kontak
                             </Link>
@@ -107,16 +107,16 @@ export default function Navbar() {
                 {/* CTA Buttons */}
                 <div className="navbar-end hidden md:flex gap-3 pr-4">
                     <Link
-                        to="/quote"
-                        className="btn btn-outline border-gray-300 text-sm hover:bg-transparent hover:border-amber-500 hover:text-amber-600 transition"
+                        to="/contact"
+                        className="btn btn-outline border-gray-300 text-sm hover:bg-transparent hover:border-amber-500 hover:text-amber-600 transition rounded-lg"
                     >
-                        Request a Quote
+                        Pesan Sekarang
                     </Link>
                     <Link
                         to="/contact"
                         className="btn bg-amber-600 hover:bg-amber-700 border-none text-white text-sm shadow-md rounded-lg"
                     >
-                        Contact Us
+                        Kontak Kami
                     </Link>
                 </div>
             </div>

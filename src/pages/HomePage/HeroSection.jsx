@@ -3,10 +3,12 @@
 import { ArrowRight, Heart, Shield, Star, Truck } from "lucide-react";
 import { useState, useEffect } from "react";
 import BadgeSongketHeartIcon from "../../components/ui/BadgeSongketHeartIcon";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
     // State untuk animasi
     const [isVisible, setIsVisible] = useState(false);
+    const navigate = useNavigate();
 
     // Effect untuk animasi saat komponen dimount
     useEffect(() => {
@@ -108,13 +110,12 @@ export default function HeroSection() {
                                 className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white border-0 px-8 py-4 text-lg font-semibold shadow-xl shadow-amber-500/25 rounded-lg flex items-center justify-center"
                                 style={{ transition: "all 0.3s ease" }}
                                 onMouseEnter={(e) =>
-                                    (e.currentTarget.style.transform =
-                                        "scale(1.05)")
+                                    (e.currentTarget.style.transform = "scale(1.05)")
                                 }
                                 onMouseLeave={(e) =>
-                                    (e.currentTarget.style.transform =
-                                        "scale(1)")
+                                    (e.currentTarget.style.transform = "scale(1)")
                                 }
+                                onClick={() => navigate("/products")}
                             >
                                 Lihat Koleksi Songket
                                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -124,13 +125,12 @@ export default function HeroSection() {
                                 className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 px-8 py-4 text-lg font-semibold rounded-lg bg-transparent"
                                 style={{ transition: "all 0.3s ease" }}
                                 onMouseEnter={(e) =>
-                                    (e.currentTarget.style.transform =
-                                        "scale(1.05)")
+                                    (e.currentTarget.style.transform = "scale(1.05)")
                                 }
                                 onMouseLeave={(e) =>
-                                    (e.currentTarget.style.transform =
-                                        "scale(1)")
+                                    (e.currentTarget.style.transform = "scale(1)")
                                 }
+                                onClick={() => navigate("/contact")}
                             >
                                 Hubungi Kami
                             </button>

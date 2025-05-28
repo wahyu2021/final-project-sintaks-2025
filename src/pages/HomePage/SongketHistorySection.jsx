@@ -1,12 +1,14 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
-import { ChevronDown, Scissors, Award, History, MapPin } from "lucide-react"
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown, Scissors, Award, History, MapPin , ArrowRight} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function SongketHistorySection() {
   const [isVisible, setIsVisible] = useState(false);
   // PERUBAHAN UTAMA: Hapus tipe generik TypeScript dari useRef
   const sectionRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const currentElement = sectionRef.current;
@@ -40,7 +42,7 @@ export default function SongketHistorySection() {
   }, [sectionRef]); // sectionRef sebagai dependensi untuk mematuhi aturan exhaustive-deps
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-gradient-to-b from-orange-50 to-amber-50 overflow-hidden">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-gradient-to-r from-amber-50 to-orange-50 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
@@ -73,13 +75,20 @@ export default function SongketHistorySection() {
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateX(0)" : "translateX(-50px)",
-              transition: "opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s",
+              // transition: "opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s",
             }}
+            data-aos-duration="1000"
+            data-aos="fade-right"
           >
             <div className="relative z-10">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1582657118090-af35eefc4e48?w=600&h=800&fit=crop&crop=center"
+                  src="/images/orang-menenun-songket.jpg"
+                  alt="Proses Pembuatan Kain Songket Tradisional"
+                  className="w-full h-auto object-cover"
+                />
+                <img
+                  src="/images/orang-menenun-songket-2.jpg"
                   alt="Proses Pembuatan Kain Songket Tradisional"
                   className="w-full h-auto object-cover"
                 />
@@ -92,7 +101,7 @@ export default function SongketHistorySection() {
               {/* Caption */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg">
                 <p className="text-sm text-gray-700 font-medium">
-                  Penenun songket tradisional menggunakan alat tenun bukan mesin (ATBM)
+                  Penenun songket tradisional menggunakan alat tenun bukan mesin
                 </p>
               </div>
             </div>
@@ -103,8 +112,10 @@ export default function SongketHistorySection() {
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateX(0)" : "translateX(50px)",
-              transition: "opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s",
+              // transition: "opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s",
             }}
+            data-aos="fade-left"
+            data-aos-duration="800"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Apa itu Kain Songket?</h3>
 
@@ -170,9 +181,11 @@ export default function SongketHistorySection() {
           className="mt-24"
           style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(30px)",
-            transition: "opacity 1s ease-out 0.8s, transform 1s ease-out 0.8s",
+            transform: isVisible ? "translateY(0)" : "translateY(50px)",
+            transition: "opacity 1s ease-out 1s, transform 1s ease-out 1s",
           }}
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-12">Perjalanan Sejarah Songket</h3>
 
@@ -279,9 +292,10 @@ export default function SongketHistorySection() {
             style={{ transition: "all 0.3s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            onClick={() => navigate("/products")}
           >
             Lihat Koleksi Songket
-            <ChevronDown className="ml-2 w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </button>
         </div>
       </div>
