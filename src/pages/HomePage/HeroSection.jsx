@@ -254,7 +254,7 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative Border */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-orange-400"></div>
+            {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-orange-400"></div> */}
         </section>
     );
 }
