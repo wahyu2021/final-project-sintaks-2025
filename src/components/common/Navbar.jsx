@@ -78,8 +78,8 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li>
-                            <details className="font-semibold hover:text-amber-500">
-                                <summary>Profil Company</summary>
+                            <details className="font-semibold ">
+                                <summary className="hover:text-amber-500">Profil</summary>
                                 <ul className="px-2 w-36">
                                     <li>
                                         <Link
