@@ -1,5 +1,4 @@
 import React from "react";
-import { PiYarn } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
