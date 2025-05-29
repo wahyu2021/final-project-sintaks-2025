@@ -61,7 +61,7 @@ export default function Navbar() {
                         to="/"
                         className="flex items-center gap-2 text-2xl font-bold text-amber-700 hover:text-amber-800 transition-colors duration-200 md:ml-8"
                     >
-                        <img src="/logo-2.png" alt="" className="h-8"/>
+                        <img src="/logo-2.png" alt="" className="h-8" />
                         <span className="tracking-wide">Sumatera Sutra</span>
                     </Link>
                 </div>
@@ -78,12 +78,27 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/about"
-                                className="font-semibold hover:text-amber-500"
-                            >
-                                Tentang Kami
-                            </Link>
+                            <details className="font-semibold hover:text-amber-500">
+                                <summary>Profil Company</summary>
+                                <ul className="px-2 w-36">
+                                    <li>
+                                        <Link
+                                            to="/about"
+                                            className="font-semibold hover:text-amber-500"
+                                        >
+                                            Tentang Kami
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/about/logo-desc"
+                                            className="font-semibold hover:text-amber-500"
+                                        >
+                                            Makna Logo
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <Link
