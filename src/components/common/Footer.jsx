@@ -8,11 +8,18 @@ import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 
 export default function Footer() {
     const companyInfoLinks = [
-        { label: "Tentang Kami", path: "/about" }, // Ganti dengan path sebenarnya
-        { label: "Sejarah Sutera Palembang", path: "" }, // Ganti dengan path sebenarnya
-        { label: "Cara Perawatan", path: "" }, // Ganti dengan path sebenarnya
+        { label: "Tentang Kami", path: "/about#" }, // Ganti dengan path sebenarnya
+        { label: "Sejarah Sutera Palembang", path: "/about#historySection" }, // Ganti dengan path sebenarnya
+        { label: "Cara Perawatan", path: "/cleaning#" }, // Ganti dengan path sebenarnya
         { label: "Testimoni", path: "/#testimoni" }, // <-- LINK KE SEKSI TESTIMONI
-        { label: "FAQ", path: "" }, // Ganti dengan path sebenarnya
+        { label: "FAQ", path: "/faq#" }, // Ganti dengan path sebenarnya
+    ];
+    const productServicesLink = [
+        { name: "Kain Sutera Songket", path: "/products#" },
+        { name: "Kain Sutera Polos", path: "/products#" },
+        { name: "Kain Sutera Jumputan", path: "/products#" },
+        { name: "Custom Design", path: "/contact#" },
+        { name: "Grosir & Eceran", path: "/contact#" },
     ];
 
     return (
@@ -27,7 +34,11 @@ export default function Footer() {
                     <div className="space-y-4">
                         <div>
                             <div className="flex items-center">
-                                <img src="/logo-2.png" alt="" className="w-16"/>
+                                <img
+                                    src="/logo-2.png"
+                                    alt=""
+                                    className="w-16"
+                                />
                                 <h3 className="text-2xl font-bold text-white mb-2">
                                     Sumatra Sutra
                                 </h3>
@@ -45,48 +56,29 @@ export default function Footer() {
                             {" "}
                             {/* Memberi sedikit lebih banyak spasi antar ikon sosial media */}
                             <Link
-                                to="#"
-                                className="text-amber-100 hover:text-white transition-colors"
-                            >
-                                <FaFacebookF className="h-5 w-5" />
-                            </Link>
-                            <Link 
-                                to="https://www.instagram.com/sumaterasutra?igsh=YmZ1dG11c2JiczV2" 
+                                to="https://www.instagram.com/sumaterasutra?igsh=YmZ1dG11c2JiczV2"
                                 className="text-amber-100 hover:text-white transition-colors"
                             >
                                 <FaInstagram className="h-5 w-5" />
-                            </Link>
-                            <Link
-                                to="#"
-                                className="text-amber-100 hover:text-white transition-colors"
-                            >
-                                <FaTwitter className="h-5 w-5" />
                             </Link>
                         </div>
                     </div>
 
                     {/* Products & Services */}
                     <div className="md:ml-8 lg:ml-16 xl:ml-28">
-                        {" "}
                         {/* Penyesuaian margin untuk layout yang lebih baik */}
                         <h6 className="font-semibold text-white mb-4">
                             Produk & Layanan
-                        </h6>{" "}
+                        </h6>
                         {/* Judul kolom lebih terang */}
                         <nav className="space-y-2">
-                            {[
-                                "Kain Sutera Songket",
-                                "Kain Sutera Polos",
-                                "Kain Sutera Jumputan",
-                                "Custom Design",
-                                "Grosir & Eceran",
-                            ].map((item, i) => (
+                            {productServicesLink.map((item, i) => (
                                 <Link
                                     key={i}
-                                    to="#"
-                                    className="block text-sm text-amber-100 hover:text-white transition-colors" /* Link lebih terang */
+                                    to={item.path} // Menggunakan path dari objek item di array productServicesLink
+                                    className="block text-sm text-amber-100 hover:text-white transition-colors" // Link lebih terang
                                 >
-                                    {item}
+                                    {item.name} {/* Menampilkan nama item */}
                                 </Link>
                             ))}
                         </nav>

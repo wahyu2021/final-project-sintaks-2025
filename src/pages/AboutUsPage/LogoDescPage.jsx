@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 // Impor ikon dari lucide-react untuk detail makna warna
 import { Gem, ShieldCheck, Feather, Palette } from "lucide-react";
 
-export default function LogoDescSection() {
+export default function LogoDescPage() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
 

@@ -104,7 +104,7 @@ export default function ContactPage() {
 
     return (
         <>
-            <section className="py-16 md:py-20 bg-gradient-to-b from-amber-50 to-orange-100">
+            <section className="py-16 md:py-20 bg-gradient-to-b from-amber-50 to-orange-100" id="contactSection">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <header className="text-center mb-12 md:mb-16">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-amber-700 tracking-tight">
