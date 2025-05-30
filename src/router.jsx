@@ -7,7 +7,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import LogoDescPage from "./pages/AboutUsPage/LogoDescPage.jsX";
+import LogoDescPage from "./pages/AboutUsPage/LogoDescPage.jsx";
 import PerawatanPage from "./pages/PerawatanPage/PerawatanPage";
 import FAQPage from "./pages/FAQ/FAQPage";
 
