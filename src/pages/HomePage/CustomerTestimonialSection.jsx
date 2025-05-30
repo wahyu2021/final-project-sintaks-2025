@@ -6,22 +6,23 @@ import { useNavigate } from "react-router-dom";
 
 // Impor Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 
 // Impor Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import SwiperCore from 'swiper';
 
 // data testimonial
-import { testimonials } from '../../components/data/testimonialData'
+import { testimonials } from '../../components/data/testimonialData';
 
 export default function CustomerTestimonialsCarousel() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const navigate = useNavigate();
 
+  // ... (useEffect dan fungsi lainnya tetap sama) ...
   useEffect(() => {
     const currentElement = sectionRef.current;
     if (!currentElement) return;
@@ -33,7 +34,7 @@ export default function CustomerTestimonialsCarousel() {
           observer.unobserve(currentElement);
         }
       },
-      { threshold: 0.05 } // Trigger saat 5% section terlihat (agar carousel siap)
+      { threshold: 0.05 }
     );
 
     observer.observe(currentElement);
@@ -75,14 +76,13 @@ export default function CustomerTestimonialsCarousel() {
     <section
       id="testimoni"
       ref={sectionRef}
-      className="py-16 md:py-24 bg-gradient-to-r from-amber-50 to-orange-50 overflow-hidden" // overflow-hidden penting untuk carousel
-      style={getFadeInUpAnimationStyle(isVisible, 0)} // Animasi fade-in untuk seluruh section
+      className="py-16 md:py-24 bg-gradient-to-r from-amber-50 to-orange-50 overflow-hidden"
+      style={getFadeInUpAnimationStyle(isVisible, 0)}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Judul Seksi */}
         <div
           className="text-center mb-12 md:mb-16"
-          // Tidak perlu animasi terpisah jika seluruh section sudah fade-in
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             Apa Kata <span className="text-amber-800">Pelanggan Kami</span> ? 
@@ -97,26 +97,37 @@ export default function CustomerTestimonialsCarousel() {
 
         {/* Carousel Testimoni */}
         <Swiper
-          // modules={[Navigation, Pagination, Autoplay, EffectCoverflow]} // Tambahkan modul yang ingin digunakan (untuk Swiper 10+)
-          effect={'coverflow'} // Efek coverflow bisa memberikan kesan 3D, tapi kita akan kustomisasi scale manual
+          // -------------------- MODIFIKASI DI SINI (LANGKAH 2) --------------------
+          modules={[EffectCoverflow, Pagination, Autoplay]} // Tambahkan Autoplay ke modules
+          // Jika Anda ingin navigasi (tombol panah), tambahkan juga Navigation dan uncomment CSS-nya serta prop navigation
+          // modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
+
+          effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={'auto'} // Membuat slide di tengah terlihat lebih besar jika dikombinasikan dengan CSS
-          // loop={true} // Aktifkan jika ingin loop tak terbatas
-          // autoplay={{ delay: 5000, disableOnInteraction: false }} // Opsional: autoplay
-          initialSlide={1}
-          coverflowEffect={{ // Opsional: jika menggunakan effect: 'coverflow'
+          slidesPerView={'auto'}
+          loop={true} // Dianjurkan untuk diaktifkan jika menggunakan autoplay agar lebih smooth
+          
+          // -------------------- MODIFIKASI DI SINI (LANGKAH 3) --------------------
+          autoplay={{ 
+            delay: 3000, // Waktu tunda antar slide dalam milidetik (ms), misal 3000ms = 3 detik
+            disableOnInteraction: false, // Tetap autoplay meskipun pengguna berinteraksi (misal klik pagination)
+                                         // Set ke true jika ingin autoplay berhenti setelah interaksi pertama
+            pauseOnMouseEnter: true, // Opsional: autoplay akan berhenti saat kursor mouse di atas slider
+          }}
+
+          initialSlide={1} // Anda bisa set ke 0 jika ingin mulai dari slide pertama
+          coverflowEffect={{
             rotate: 30,
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows: false, // Matikan bayangan slide default jika kita buat kustom
+            slideShadows: false,
           }}
           pagination={{ clickable: true, dynamicBullets: true }}
-          // navigation={true} // Aktifkan jika ingin tombol navigasi prev/next
-          className="!pb-12 md:!pb-16" // Tambahkan padding-bottom untuk pagination
+          // navigation={true} // Uncomment jika ingin tombol navigasi prev/next
+          className="!pb-12 md:!pb-16"
           breakpoints={{
-            // Responsif: jumlah slide yang terlihat per breakpoint
             320: {
               slidesPerView: 1.2,
               spaceBetween: 15,
@@ -132,21 +143,20 @@ export default function CustomerTestimonialsCarousel() {
           }}
         >
           {testimonials.map((testimonial) => (
-            // Setiap SwiperSlide akan memiliki style transisi untuk efek "maju ke depan"
             <SwiperSlide 
               key={testimonial.id} 
-              className="!flex !justify-center" // Override beberapa style Swiper untuk centering
+              className="!flex !justify-center"
             >
-              {({ isActive }) => ( // isActive akan true jika slide berada di tengah (jika centeredSlides true)
+              {({ isActive }) => (
                 <div
                   className={`card bg-base-100 shadow-lg transition-all duration-500 ease-out-cubic
                               ${isActive ? 'scale-105 z-10 !shadow-2xl' : 'scale-90 opacity-70'}`}
                   style={{ 
-                    maxWidth: '380px', // Batasi lebar maksimum kartu
-                    width: '90%',     // Ambil 90% dari lebar slide
+                    maxWidth: '380px',
+                    width: '90%',    
                   }}
                 >
-                  <div className="card-body items-center text-center p-6 md:p-8"> {/* Padding di card-body */}
+                  <div className="card-body items-center text-center p-6 md:p-8">
                     <div className="mb-4">
                       {testimonial.avatar ? (
                         <img
@@ -163,7 +173,7 @@ export default function CustomerTestimonialsCarousel() {
                     </h3>
                     <div className="text-xs text-gray-500 mb-3">{testimonial.date}</div>
                     <div className="mb-4">{renderStars(testimonial.rating)}</div>
-                    <p className="text-base-content/80 leading-relaxed text-sm h-24 overflow-y-auto"> {/* Batasi tinggi dan beri scroll jika perlu */}
+                    <p className="text-base-content/80 leading-relaxed text-sm h-24 overflow-y-auto">
                       "{testimonial.review}"
                     </p>
                   </div>
@@ -174,30 +184,31 @@ export default function CustomerTestimonialsCarousel() {
         </Swiper>
       </div>
       {/* Call to Action */}
-        <div
-          className="mt-24 text-center"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(30px)",
-            transition: "opacity 1s ease-out 1s, transform 1s ease-out 1s",
-          }}
+      {/* ... (Sisa kode CTA tetap sama) ... */}
+      <div
+        className="mt-24 text-center"
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateY(0)" : "translateY(30px)",
+          transition: "opacity 1s ease-out 1s, transform 1s ease-out 1s",
+        }}
+      >
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Jelajahi Koleksi Songket Kami</h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Temukan keindahan songket asli Sumatera dengan berbagai motif tradisional yang ditenun dengan keahlian
+          tinggi dan benang berkualitas premium.
+        </p>
+        <button
+          className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center mx-auto"
+          style={{ transition: "all 0.3s ease" }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+          onClick={() => navigate("/products")}
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Jelajahi Koleksi Songket Kami</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Temukan keindahan songket asli Sumatera dengan berbagai motif tradisional yang ditenun dengan keahlian
-            tinggi dan benang berkualitas premium.
-          </p>
-          <button
-            className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center mx-auto"
-            style={{ transition: "all 0.3s ease" }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            onClick={() => navigate("/products")}
-          >
-            Lihat Koleksi Songket
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
-        </div>
+          Lihat Koleksi Songket
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </button>
+      </div>
     </section>
   );
 }
