@@ -78,7 +78,7 @@ export default function HistorySection() {
                             </p>
                         </div>
                         <div
-                            className="md:w-1/2 flex justify-center"
+                            className="md:w-1/2 flex justify-center mt-4"
                             data-aos="zoom-in"
                             data-aos-delay="100"
                         >
