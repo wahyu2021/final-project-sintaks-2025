@@ -23,7 +23,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-amber-600 border-t border-amber-700 flex justify-center">
+        <footer className="bg-amber-600 border-t border-amber-700 flex justify-center px-2">
             {" "}
             {/* Border sedikit lebih gelap untuk subtle separation */}
             <div className="container py-12 text-amber-50">

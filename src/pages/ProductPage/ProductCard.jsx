@@ -35,8 +35,8 @@ export function ProductCard({ product, onShowDetail }) {
                             Makna Motif:
                         </span>
                         <span
-                            className="text-gray-600 ml-2 break-words h-10 overflow-hidden text-ellipsis"
-                            title={product.motif}
+                            className="text-gray-600 ml-2 break-words line-clamp-2"
+                            title={product.motif} // Atribut title tetap berguna untuk menampilkan teks penuh saat di-hover (pada desktop)
                         >
                             {product.motif}
                         </span>

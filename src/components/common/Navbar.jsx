@@ -108,7 +108,7 @@ export default function Navbar() {
                         className="flex items-center gap-2 text-xl md:text-2xl font-bold text-amber-700 hover:text-orange-600 transition-colors duration-200 ml-2 md:ml-4"
                     >
                         <img src="/logo-2.png" alt="Sumatra Sutra Logo" className="h-8 md:h-9" />
-                        <span className="tracking-wide">Sumatra Sutra</span>
+                        <span className="tracking-wide  whitespace-nowrap">Sumatra Sutra</span>
                     </Link>
                 </div>
 
@@ -154,7 +154,7 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="navbar-end hidden md:flex gap-2 md:gap-3 mr-2 md:mr-4">
+                <div className="md:navbar-end hidden md:flex md:gap-3 md:mr-4">
                     {/* ... Tombol CTA tetap sama ... */}
                     <a
                         href="https://wa.me/6287765176764"
