@@ -43,30 +43,46 @@ Website ini dibangun dengan teknologi web modern untuk performa dan pengalaman p
 ## 📁 Struktur Proyek
 
 ```bash
-sumatera-sutra/
-├── public/                    # Aset statis seperti logo, favicon
+SUMATERA-SUTRA/
+├── node_modules/
+├── public/
+│   └── (berisi aset statis seperti favicon, gambar-gambar yang tidak diproses, dll.)
 ├── src/
-│   ├── assets/               # Gambar, data dummy, style global
-│   │   ├── images/
-│   │   ├── styles/
-│   │   └── data/
-│   ├── components/           # Komponen UI reusable
+│   ├── assets/
+│   │   └── images/
+│   │       └── react.svg
+│   ├── components/
 │   │   ├── common/
-│   │   ├── product/
+│   │   ├── data/
 │   │   └── ui/
-│   ├── contexts/             # Global state (ex: keranjang belanja)
-│   ├── hooks/                # Custom hooks React
-│   ├── pages/                # Halaman utama (Home, Produk, About, dll.)
-│   ├── services/             # Integrasi API dan Firebase
-│   ├── utils/                # Fungsi utilitas bantu
-│   ├── App.jsx               # Komponen utama aplikasi
-│   ├── main.jsx              # Entry point aplikasi
-│   └── router.jsx            # Konfigurasi routing
-├── .env                      # Environment variables
+│   ├── layouts/
+│   │   └── AppLayout.jsx
+│   ├── pages/
+│   │   ├── AboutUsPage/
+│   │   │   └── (misalnya: AboutUsPage.jsx, AboutUs.css)
+│   │   ├── ContactPage/
+│   │   │   └── (misalnya: ContactPage.jsx)
+│   │   ├── FAQ/
+│   │   │   └── (misalnya: FaqPage.jsx)
+│   │   ├── HomePage/
+│   │   │   └── (misalnya: HomePage.jsx)
+│   │   ├── NotFoundPage/
+│   │   │   └── (misalnya: NotFoundPage.jsx)
+│   │   ├── PerawatanPage/
+│   │   │   └── (misalnya: PerawatanPage.jsx)
+│   │   └── ProductPage/
+│   │       └── (misalnya: ProductPage.jsx)
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── router.jsx
 ├── .gitignore
-├── package.json
-├── vite.config.js
-└── README.md
+├── eslint.config.js
+├── index.html
+├── package.json             
+├── package-lock.json    
+└── vite.config.js          
 ```
 
 ---
