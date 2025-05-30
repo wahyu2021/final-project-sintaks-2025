@@ -12,7 +12,7 @@ export default function Footer() {
         { label: "Sejarah Sutera Palembang", path: "/about#historySection" }, // Ganti dengan path sebenarnya
         { label: "Cara Perawatan", path: "/cleaning#" }, // Ganti dengan path sebenarnya
         { label: "Testimoni", path: "/#testimoni" }, // <-- LINK KE SEKSI TESTIMONI
-        { label: "FAQ", path: "/faq#" }, // Ganti dengan path sebenarnya
+        { label: "FAQ", path: "/faq#section" }, // Ganti dengan path sebenarnya
     ];
     const productServicesLink = [
         { name: "Kain Sutera Songket", path: "/products#" },

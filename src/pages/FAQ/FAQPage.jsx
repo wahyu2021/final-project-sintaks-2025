@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FAQPage() {
     return (
-        <div class="container mx-auto px-4 py-8 md:py-12" id="faq">
+        <div class="container mx-auto px-4 py-8 md:py-12" id="section">
             <header class="text-center mb-10 md:mb-14">
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-700">
                     Pertanyaan yang Sering Diajukan (FAQ)

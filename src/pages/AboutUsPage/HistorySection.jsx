@@ -65,17 +65,6 @@ export default function HistorySection() {
                         className={`md:flex md:items-center md:gap-8 lg:gap-12 ${contentCardBase} hover:shadow-2xl transition-shadow duration-300`}
                         data-aos="fade-left"
                     >
-                        <div
-                            className="md:w-1/2 flex justify-center"
-                            data-aos="zoom-in"
-                            data-aos-delay="100"
-                        >
-                            <img
-                                src={sejarahImage2}
-                                className="w-full max-w-md rounded-xl shadow-lg object-cover aspect-[4/3]"
-                                alt="Penyebaran Songket"
-                            />
-                        </div>
                         <div className="md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold text-amber-700 mb-3">
                                 Penyebaran dan Pengaruh
@@ -87,6 +76,17 @@ export default function HistorySection() {
                                 perkawinan antarbangsawan. Setiap daerah
                                 mengembangkan ciri khasnya sendiri.
                             </p>
+                        </div>
+                        <div
+                            className="md:w-1/2 flex justify-center"
+                            data-aos="zoom-in"
+                            data-aos-delay="100"
+                        >
+                            <img
+                                src={sejarahImage2}
+                                className="w-full max-w-md rounded-xl shadow-lg object-cover aspect-[4/3]"
+                                alt="Penyebaran Songket"
+                            />
                         </div>
                     </div>
                     <div
