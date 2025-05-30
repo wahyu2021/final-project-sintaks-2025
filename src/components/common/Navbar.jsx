@@ -154,7 +154,7 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="navbar-end flex gap-2 md:gap-3 mr-2 md:mr-4">
+                <div className="navbar-end hidden md:flex gap-2 md:gap-3 mr-2 md:mr-4">
                     {/* ... Tombol CTA tetap sama ... */}
                     <a
                         href="https://wa.me/6287765176764"
