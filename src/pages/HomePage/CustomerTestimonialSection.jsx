@@ -110,7 +110,7 @@ export default function CustomerTestimonialsCarousel() {
           
           // -------------------- MODIFIKASI DI SINI (LANGKAH 3) --------------------
           autoplay={{ 
-            delay: 3000, // Waktu tunda antar slide dalam milidetik (ms), misal 3000ms = 3 detik
+            delay: 2000, // Waktu tunda antar slide dalam milidetik (ms), misal 3000ms = 3 detik
             disableOnInteraction: false, // Tetap autoplay meskipun pengguna berinteraksi (misal klik pagination)
                                          // Set ke true jika ingin autoplay berhenti setelah interaksi pertama
             pauseOnMouseEnter: true, // Opsional: autoplay akan berhenti saat kursor mouse di atas slider
@@ -125,7 +125,6 @@ export default function CustomerTestimonialsCarousel() {
             slideShadows: false,
           }}
           pagination={{ clickable: true, dynamicBullets: true }}
-          // navigation={true} // Uncomment jika ingin tombol navigasi prev/next
           className="!pb-12 md:!pb-16"
           breakpoints={{
             320: {
